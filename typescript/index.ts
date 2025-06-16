@@ -20,4 +20,98 @@ let str_arr: (number | string | undefined)[] = [1, 2, 4, 6, undefined];
 // 类型别名
 
 type customArr = (string | number)[];
-let arr3: customArr = [true];
+let arr3: customArr = [1, 2, 3, "8"];
+
+// 函数类型
+
+// 函数声明
+function add(num1: number, num2: number): number {
+  return num1 + num2;
+}
+// 函数表达式
+
+const add1 = (num1: number, num2: number): number => {
+  return num1 + num2;
+};
+// 同时指定参数，返回值类型
+const add2: (num1: number, num2: number) => number = (num1, num2) => {
+  return num1 + num2;
+};
+
+add(20, 10);
+// void 返回值为空
+function hello(): void {}
+
+// 函数可选参数
+
+function phone(width: number, height: number, weight?: number): void {}
+
+/**
+ *
+ * 对象类型
+ */
+
+let animal: { name: string; age: number; speak(): number } = {
+  name: "jack",
+  age: 20,
+  speak() {
+    return 100;
+  },
+};
+
+function axios(config: { url: string; methods?: string }) {}
+
+axios({ url: "/api/get", methods: "get" });
+
+/**
+ * 接口
+ */
+
+interface Iperson {
+  name: string;
+  age: number;
+  sayhi: () => void;
+}
+
+let person: Iperson = {
+  name: "章三",
+  age: 20,
+  sayhi() {},
+};
+
+// 接口继承
+
+interface point2 {
+  x: number;
+  y: number;
+  sum(a: number, b?: number | undefined): number;
+}
+
+interface point3 extends point2 {
+  z: number;
+}
+
+let point4: point3 = {
+  x: 1,
+  y: 200,
+  z: 200,
+
+  sum(a, b) {
+    return a;
+  },
+};
+
+/**
+ * 元祖
+ */
+
+let position: [number, number] = [12.348, 758.8];
+
+/**
+ * 类型断言
+ */
+
+let alink = document.getElementById("cen") as HTMLAnchorElement;
+let aa = <HTMLAnchorElement>document.getElementById("cen");
+
+alink.href;
