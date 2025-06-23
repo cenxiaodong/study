@@ -68,3 +68,18 @@ let position = [12.348, 758.8];
 let alink = document.getElementById("cen");
 let aa = document.getElementById("cen");
 alink.href;
+let a = "hello ts";
+const a2 = "hello ts";
+function changeDirection(dirrction) { }
+changeDirection("down");
+var Direction;
+(function (Direction) {
+    Direction[Direction["Up"] = 4] = "Up";
+    Direction[Direction["Down"] = 5] = "Down";
+    Direction[Direction["Left"] = 6] = "Left";
+    Direction[Direction["Right"] = 7] = "Right";
+})(Direction || (Direction = {}));
+function changeD(direction) {
+    console.log(direction);
+}
+changeD(Direction.Left);

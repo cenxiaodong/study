@@ -115,3 +115,21 @@ let alink = document.getElementById("cen") as HTMLAnchorElement;
 let aa = <HTMLAnchorElement>document.getElementById("cen");
 
 alink.href;
+
+let a = "hello ts";
+const a2 = "hello ts";
+
+function changeDirection(dirrction: "up" | "down" | "left" | "right") {}
+changeDirection("down");
+
+enum Direction {
+  Up = 4,
+  Down,
+  Left,
+  Right,
+}
+
+function changeD(direction: Direction) {
+  console.log(direction);
+}
+changeD(Direction.Left);
