@@ -133,3 +133,9 @@ function changeD(direction: Direction) {
   console.log(direction);
 }
 changeD(Direction.Left);
+
+let obj = { x: 1, y: 2 };
+
+function formatPoint(point: typeof obj) {}
+
+formatPoint({ x: 1, y: 89 });
